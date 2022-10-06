@@ -1,0 +1,97 @@
+ALGORITHM sommeElemDiff
+VAR
+tab1, tab2: array_name : ARRAY_OF INTEGER[];
+sum: nombre;
+BEGIN
+    read tab1;
+    read tab2;
+    FOR i FROM 1 TO tab1.length STEP i++  DO
+        FOR j FROM 1 TO tab.length STEP j++  DO
+            IF (tab1[i]<>tab2[j]) THEN
+                sum: tab1[i]+tab2[j];
+            END_IF
+        END_FOR
+    END_FOR
+    write: "voici la somme:",sum;
+
+END
+
+
+ALGORITHM sommeSameElem
+VAR
+tab1, tab2: array_name : ARRAY_OF INTEGER[];
+sum: nombre;
+BEGIN
+    read tab1;
+    read tab2;
+    FOR i FROM 1 TO tab1.length STEP i++  DO
+        FOR j FROM 1 TO tab.length STEP j++  DO
+            IF (tab1[i]==tab2[j]) THEN
+                sum: tab1[i]*2;
+            END_IF
+        END_FOR
+    END_FOR
+    write: "voici la somme:",sum;
+
+END
+
+
+FUNCTION dot_product(v1,v2:ARRAY_OF INTEGER) : return_type: nombre;
+VAR
+i, multip: INTEGER;
+BEGIN
+    if (v1.length<>v2.length) THEN
+        write: "les deux tableaux sont différents!" 
+        END_IF 
+            WHILE (i<v1.length) DO
+                        multip: multip+ v1[i]v2[i];
+            END_WHILE
+
+    RETURN multip ;
+END
+
+
+
+
+
+ALGORITHM dot_product
+VAR
+    tab1, tab2
+BEGIN
+read: tab1
+read: tab2
+dot_product(v1,v2)= ps
+IF (ps=0) THEN
+    write" les deux vecteurs sont orthogonaux"
+ELSE
+    write" les deux vecteurs ne sont pas orthogonaux"
+END_IF
+END
+
+
+PROCEDURE dot_product(multip:INTEGER,v1,v2:ARRAY_OF INTEGER)
+VAR
+    i: INTEGER;
+
+BEGIN
+if (v1.length<>v2.length) THEN
+        write: "les deux tableaux sont différents!" 
+        END_IF 
+            WHILE (i<v1.length) DO
+                        multip: multip+ v1[i]v2[i];
+            END_WHILE 
+END
+
+ALGORITHM dot_product
+VAR
+    v1,v2 ARRAY_OF INTEGER, multip:INTEGER
+BEGIN
+read(v1);
+read(v2);
+dot_product(v1,v2, multip)
+if (multip=O)
+write:"les deux vecteurs sont orthogonaux"
+ELSE
+write:"les deux vecteurs ne sont pas orthogonaux"
+
+END
